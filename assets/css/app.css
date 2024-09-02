@@ -143,6 +143,12 @@ color: #14b0fe;
 .Symbol {
   fill: url(#gradient);
 }
+
+.cls-2 {
+  fill: #0055a2;
+  stroke: #0055a2;
+}
+
 .rtext {
   font-size: 12px;
   fill: #333;

@@ -858,10 +858,9 @@ window.onload = function() {
         }
       }
     }
-    var osttm = "\u2122";
-    var myname = "OpenSpeedTest";
+    var myname = "Excelente";
     var com = ".com";
-    var ost = myname + osttm;
+    var ost = myname;
     function hiEnter(e) {
       if (e.key === "Enter") {
         runTasks();
@@ -908,7 +907,7 @@ window.onload = function() {
           Show.showStatus("Milliseconds");
         }
         if (Status === "Download") {
-          Show.showStatus("Initializing..");
+          Show.showStatus("Empezando..");
           Get.reset();
           reSett();
           Show.reset();
@@ -928,7 +927,7 @@ window.onload = function() {
           }
           downloadTimeing = (window.performance.now() - downloadTime) / 1000;
           reportCurrentSpeed("dl");
-          Show.showStatus("Mbps download");
+          Show.showStatus("Mbps descarga");
           Show.mainGaugeProgress(currentSpeed);
           Show.LiveSpeed(currentSpeed);
           Show.Graph(currentSpeed, 0);
@@ -936,7 +935,7 @@ window.onload = function() {
           if (downloadTimeing >= dlDuration && ProG == "done") {
             if (SelectTest) {
               Show.GaugeProgresstoZero(currentSpeed, "SendR");
-              Show.showStatus("All done");
+              Show.showStatus("Finalizado");
               Show.Symbol(2);
             } else {
               Show.GaugeProgresstoZero(currentSpeed, "Upload");
@@ -953,7 +952,7 @@ window.onload = function() {
           if (stop === 1) {
             Show.Symbol(1);
             Status = "initup";
-            Show.showStatus("Initializing..");
+            Show.showStatus("Empezando..");
             Show.LiveSpeed("...", "speedToZero");
             SendData = Get.uRandom(ulDataSize, readyToUP);
             if (SelectTest) {
@@ -985,7 +984,7 @@ window.onload = function() {
             Show.uploadResult(uploadSpeed);
             Show.GaugeProgresstoZero(currentSpeed, "SendR");
             SendData = undefined;
-            Show.showStatus("All done");
+            Show.showStatus("Finalizado");
             Show.Symbol(2);
             Status = "busy";
             stop = 0;
@@ -1005,7 +1004,7 @@ window.onload = function() {
           circleSVG.innerHTML = dummyElement.innerHTML;
         }
         if (Status === "SendR") {
-          Show.showStatus("All done");
+          Show.showStatus("Finalizado");
           var dummyElement = document.createElement("div");
           dummyElement.innerHTML = '<a xlink:href="https://openspeedtest.com?ref=Self-Hosted-Outro&run=5" style="cursor: pointer" target="_blank"></a>';
           var htmlAnchorElement = dummyElement.querySelector("a");

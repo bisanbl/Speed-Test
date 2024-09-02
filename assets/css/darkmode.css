@@ -20,6 +20,10 @@ body {
 .rtextmbms {
   fill: #ffffff;
 }
+.cls-2 {
+  stroke: #fff;
+  fill: #fff;
+}
 .rtext {
   fill: #ffffff;
 }
@@ -31,7 +35,7 @@ body {
   stroke: #000000;
 }
 .uiBg {
-  fill: #000000;
+  fill: rgb(125 119 119);
 }
 .progressbg {
   stroke: #202020;
